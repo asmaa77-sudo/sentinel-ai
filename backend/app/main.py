@@ -2,9 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="Sentinel AI",
-    description="AI-Powered Cloud Security Analyst",
+    description="AI-powered cybersecurity assistant",
     version="1.0.0"
 )
+
 
 @app.get("/")
 def home():
@@ -12,8 +13,10 @@ def home():
         "message": "Welcome to Sentinel AI 🚀"
     }
 
+
 @app.get("/health")
-def health():
+def health_check():
     return {
-        "status": "healthy"
+        "status": "running",
+        "service": "Sentinel AI Backend"
     }
